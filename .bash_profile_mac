@@ -1,0 +1,187 @@
+alias ll='ls -alvGF'
+alias grep='grep --color'
+alias clears='clear && printf "\e[3J"'
+
+ulimit -c unlimited
+
+##############################	
+# git
+##############################	
+alias gp='git pull'
+alias gd='git diff'
+alias gc='git commit'
+alias gs='git status'
+alias ga='git add'
+
+##############################
+# brew
+#############################
+
+export DYLD_LIBRARY_PATH=.:/Users/legna/git/brew/osx/lib
+export LD_LIBRARY_PATH=.:/Users/legna/git/brew/osx/lib
+export MONO_PATH=.:/Users/legna/git/brew/osx/lib
+
+
+#alias vic='vi $(find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) )'
+
+#alias cdgamed='cd ~/Perforce/legna_legna-macui-iMac_8273/Program/Server/gamedaemon'
+#alias cdbrew='cd ~/Perforce/legna_legna-macui-iMac_8273/Program/Server/external/source/brew/brew_20150516/source/sdk'
+#alias ssh_builder='ssh rx1builder@172.20.83.88'
+#alias ssh_program='ssh rx1program@172.20.83.88'
+#alias ssh_internal='ssh rx1internal@172.20.83.88'
+#alias ssh_admin='ssh rx1admin@172.20.83.88'
+
+#_PROGRAM_PATH=/Users/legna/Perforce/legna_legna-macui-iMac_8273/Program
+#SERVER_PATH=$_PROGRAM_PATH/Server
+#_EXTERNAL_PATH=$_PROGRAM_PATH/Server/external
+#_BREW_SOURCE_PATH=$_EXTERNAL_PATH/source/brew/brew_20150507/source
+#BREW_SDK_PATH=$_BREW_SOURCE_PATH/sdk
+#BREW_TEST_PATH=$_BREW_SOURCE_PATH/test
+#
+#function data_update_program()
+#{
+#  scp ~/Perforce/legna_legna-macui-iMac_8273/Distribution/Internal/Client/Content/Local/ENG/DataTable/*.csv rx1admin@172.20.83.88:~/RX1/program/gamedaemon/bin/data
+#}
+#
+#function data_update_internal()
+#{
+#  scp ~/Perforce/legna_legna-macui-iMac_8273/Distribution/Internal/Client/Content/Local/ENG/DataTable/*.csv rx1admin@172.20.83.88:~/RX1/internal/gamedaemon/bin/data
+#}
+#
+#function vic()
+#{
+#	pushd .;
+#	cd $SERVER_PATH;
+#	vi $(find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) );
+#	popd;
+#}
+#
+## argument : path
+#function _vi
+#{
+#	pushd .;
+#	cd $1;
+#	vi $(find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) );
+#	popd;
+#}
+#
+#function vigamed()
+#{
+#	_vi $SERVER_PATH/gamedaemon;
+#}
+
+
+#function vibrew()
+#{
+#	_vi $BREW_SDK_PATH;
+#}
+#
+#function viobjecttest()
+#{
+#	_vi $BREW_TEST_PATH/object_test;
+#}
+#
+#function vidispatchertest()
+#{
+#	_vi $BREW_TEST_PATH/dispatcher_test;
+#}
+#
+#function vitcptest()
+#{
+#	_vi $BREW_TEST_PATH/tcp_test;
+#}
+#
+#P4_BIN=~/bin/p4
+#
+## argument : change list
+#function p4opened()
+#{
+#	if [ -z $1 ]; then
+#		changelist='default';
+#	else
+#		changelist=$1;
+#	fi
+#	p4 opened -c $changelist
+#}
+#
+#function p4revert()
+#{
+#	if [ -z $1 ]; then
+#		changelist='default';
+#	else
+#		changelist=$1;
+#	fi
+#	p4 opened -c $changelist | sed 's/#.*//' | xargs -o $P4_BIN revert
+#}
+#
+#function p4submit()
+#{
+#	if [ -z $1 ]; then
+#		p4 submit
+#	else
+#		p4 submit $1
+#	fi
+#}
+#
+#function p4diff()
+#{
+#	if [ -z $1 ]; then
+#		changelist='default';
+#	else
+#		changelist=$1;
+#	fi
+#	p4 opened -c $changelist | sed 's/#.*//' | xargs -o $P4_BIN diff
+#}
+#
+#function p4pending()
+#{
+#	p4 changes -s pending -u legna
+#}
+#
+#function p4sync()
+#{
+#	p4 sync //depot/program/server/...
+#	p4 sync //depot/program/data/...
+#	p4 sync //depot/program/definition/...
+#	p4 sync //depot/program/external/...
+#}
+#
+#
+##for f in *.cpp; do mv ./"$f" "${f%cpp}cc"; done
+#
+###
+## Your previous /Users/legna/.bash_profile file was backed up as /Users/legna/.bash_profile.macports-saved_2015-04-09_at_16:58:00
+###
+#
+## MacPorts Installer addition on 2015-04-09_at_16:58:00: adding an appropriate PATH variable for use with MacPorts.
+#export PATH="/opt/local/bin:/opt/local/sbin:~/bin:$PATH"
+## Finished adapting your PATH environment variable for use with MacPorts.
+#
+## adding by legna
+##export P4PORT=172.20.81.39:1667
+##export P4EDITOR=legna
+##export P4CLIENT=legna_legna-macui-iMac_8273
+#export P4CONFIG=.p4config
+##export LANG='ko_KR.eucKR'
+#
+#
+#
+#
+## Setting PATH for Python 2.7
+## The orginal version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#export PATH
+#
+## Setting PATH for Python 2.7
+## The orginal version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#export PATH
+#
+## Setting PATH for Python 3.4
+## The orginal version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+#export PATH
+#
+## setting rx1
+#PATH="~/Perforce/legna_legna-macui-iMac_8273/Program/Server/tool:${PATH}"
+#export PATH
