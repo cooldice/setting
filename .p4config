@@ -1,0 +1,4 @@
+P4CLIENT=legna-win-rmini
+P4USER=legna
+P4PORT=ssl:rsrc:1666
+P4CHARSET=utf8
